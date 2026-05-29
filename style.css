@@ -1,0 +1,167 @@
+body {
+  background-color: #030303;
+  color: #f4f4f4;
+  overflow-x: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
+::selection {
+  background: #c5a059;
+  color: #000;
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #c5a059;
+  transition:
+    width 0.2s,
+    height 0.2s,
+    background-color 0.2s;
+}
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  transition:
+    width 0.3s,
+    height 0.3s,
+    border-color 0.3s;
+}
+.cursor-hover .cursor-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #f4f4f4;
+}
+.cursor-hover .cursor-outline {
+  width: 60px;
+  height: 60px;
+  border-color: rgba(244, 244, 244, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition:
+    opacity 1.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.reveal-delay-1 {
+  transition-delay: 0.2s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.4s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.6s;
+}
+
+/* --- 1. Opening Experience Animations --- */
+#intro-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9990;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+}
+.intro-text-1,
+.intro-text-2 {
+  position: absolute;
+  opacity: 0;
+}
+.intro-text-1 {
+  animation: fadeInOut 3s linear forwards;
+}
+.intro-text-2 {
+  animation: fadeInOut 4.5s linear 2.5s forwards;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(0.95);
+  }
+  25% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(1.05);
+  }
+}
+
+.cinematic-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: -1;
+}
+.glow-blue {
+  background: rgba(26, 60, 128, 0.4);
+}
+.glow-gold {
+  background: rgba(197, 160, 89, 0.2);
+}
+
+.slow-zoom {
+  transition: transform 10s ease-out;
+}
+.hover-zoom:hover .slow-zoom {
+  transform: scale(1.08);
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label,
+textarea:focus ~ label,
+textarea:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 10px;
+  color: #c5a059;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px #030303 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: white;
+}
