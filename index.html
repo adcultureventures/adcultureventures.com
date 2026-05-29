@@ -1,127 +1,545 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction | Corporate Identity</title>
-    <style>
-        :root {
-            --primary: #1a1a1a;
-            --secondary: #555555;
-            --accent: #c5a059;
-            --bg: #ffffff;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <!-- 
+        Website built by ApexCause (https://apexcause.com)
+    -->
+    <meta name="author" content="ApexCause" />
+    <meta name="designer" content="ApexCause" />
+    <link rel="author" href="humans.txt" />
+    <link rel="author" href="https://apexcause.com" />
+    <link rel="designer" href="https://apexcause.com" />
 
-        body {
-            background-color: var(--bg);
-            color: var(--primary);
-            font-family: "Times New Roman", Times, serif; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
+    <title>AdCulture Ventures</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: "#030303",
+              gold: "#C5A059",
+              blue: "#1A3C80",
+              offwhite: "#F4F4F4",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+            },
+            letterSpacing: {
+              "widest-xl": "0.3em",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="antialiased">
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
 
-        .sans-font {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 700px;
-            text-align: left;
-        }
-
-        .logo-text {
-            font-family: -apple-system, sans-serif;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            margin-bottom: 4rem;
-            border-left: 3px solid var(--primary);
-            padding-left: 15px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            line-height: 1.1;
-            font-weight: 400;
-            margin-bottom: 2rem;
-            color: var(--primary);
-        }
-
-        .description {
-            font-family: -apple-system, sans-serif;
-            font-size: 1.05rem;
-            color: var(--secondary);
-            max-width: 500px;
-            margin-bottom: 3.5rem;
-            line-height: 1.8;
-        }
-
-        .support-section {
-            font-family: -apple-system, sans-serif;
-            border-top: 1px solid #e0e0e0;
-            padding-top: 2rem;
-        }
-
-        .support-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--secondary);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .support-email {
-            font-size: 1.1rem;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: opacity 0.2s ease;
-        }
-
-        .support-email:hover {
-            opacity: 0.7;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .container { text-align: center; }
-            .logo-text { border-left: none; padding-left: 0; }
-            .description { margin: 0 auto 3rem auto; }
-        }
-
-        @media (min-width: 1024px) {
-            h1 { font-size: 3.5rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <div class="logo-text">AdCultureVentures</div>
-        
-        <h1>Expanding our digital infrastructure.</h1>
-        
-        <p class="description">
-            Our full corporate suite is currently under development to better serve our clients and partners. We are committed to delivering a comprehensive experience shortly.
-        </p>
-
-        <div class="support-section">
-            <span class="support-label">Direct Inquiries & Support</span>
-            <a href="mailto:support@adcultureventures.com" class="support-email">support@adcultureventures.com</a>
-        </div>
+    <div id="intro-screen">
+      <h1
+        class="intro-text-1 text-2xl md:text-4xl font-light tracking-widest-xl uppercase text-white"
+        style="text-align: center"
+      >
+        AdCulture Ventures
+      </h1>
+      <p
+        class="intro-text-2 text-sm md:text-lg tracking-[0.2em] text-gray-150"
+      >
+        We don’t follow attention. We design it.
+      </p>
     </div>
 
-</body>
+    <div
+      id="main-content"
+      class="opacity-0 transition-opacity duration-[1500ms] ease-in"
+    >
+      <nav
+        class="fixed top-0 w-full p-8 md:p-12 flex justify-between items-center z-40 mix-blend-difference"
+      >
+        <img
+          src="logo.png"
+          alt="Logo"
+          class="h-12 md:h-16 object-contain transition duration-500 interactive"
+          onerror="
+            this.outerHTML =
+              '<span class=\'text-xs uppercase tracking-widest-xl font-light text-gold\'>ACV</span>'
+          "
+        />
+        <a
+          href="#contact"
+          class="text-s uppercase tracking-widest-xl font-light text-white hover:text-gold transition-colors duration-500 interactive"
+          >Connect</a
+        >
+      </nav>
+
+      <!-- HERO -->
+      <section
+        class="h-screen w-full flex flex-col justify-center items-center relative overflow-hidden"
+      >
+        <div
+          class="cinematic-glow glow-blue w-[120vw] h-[120vw] md:w-[60vw] md:h-[60vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        ></div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full text-center relative z-10 flex flex-col items-center">
+          <div class="reveal">
+            <h1
+              class="text-5xl md:text-6xl lg:text-7xl font-extralight tracking-[0.15em] uppercase mb-6 leading-tight text-offwhite"
+            >Not Marketing.<br />Presence.
+            </h1>
+          </div>
+          <div class="reveal reveal-delay-1 mt-4">
+            <p
+              class="text-xs md:text-sm text-white tracking-[0.3em] uppercase font-bold"
+            >
+              Built through culture, not noise.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHILOSOPHY SECTION -->
+      <section class="py-20 md:py-36 w-full relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full text-left">
+          <div class="reveal mb-12 md:mb-16">
+            <h2 class="text-base md:text-base text-blue uppercase tracking-widest-xl font-semibold relative pb-4 inline-block">
+              Philosophy
+              <span class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-gold via-white to-gold rounded-full"></span>
+            </h2>
+          </div>
+          <div
+            class="text-2xl md:text-5xl font-light leading-[1.4] md:leading-[1.3] text-gray-300"
+          >
+            <p class="mb-10 md:mb-12 reveal">
+              Most brands compete for visibility.<br class="hidden md:block" />
+              <span class="text-white font-normal">Few are remembered.</span>
+            </p>
+            <p
+              class="mb-12 text-gray-500 text-xl md:text-4xl reveal reveal-delay-1"
+            >
+              We build marketing systems that integrate into real life where
+              brands are not just seen, but experienced.
+            </p>
+            <p class="text-lg md:text-3xl text-gray-400 reveal reveal-delay-2">
+              AdCulture Ventures operates where
+              <span class="text-gold">strategy meets culture</span>, and ideas
+              translate into presence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPABILITIES -->
+      <section class="py-20 md:py-36 w-full bg-[#050505] relative overflow-hidden border-y border-white/5">
+        <div
+          class="cinematic-glow glow-gold w-[80vw] h-[80vw] md:w-[40vw] md:h-[40vw] top-0 left-0 opacity-20"
+        ></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full text-left relative z-10">
+          <div class="reveal mb-12 md:mb-16">
+            <h2 class="text-base md:text-base text-blue uppercase tracking-widest-xl font-semibold relative pb-4 inline-block">
+              Capabilities
+              <span class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-gold via-white to-gold rounded-full"></span>
+            </h2>
+          </div>
+          <div
+            class="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-0 w-full"
+          >
+            <div
+              class="reveal relative text-left flex-1 w-full border-t border-white/5 md:border-t-0 md:border-l pt-6 pb-6 md:pt-0 md:pb-0 md:pl-8 transition-colors duration-500 hover:border-gold/30 group"
+            >
+              <div class="w-full flex items-center justify-between md:inline-flex md:flex-col md:items-center md:w-auto">
+                <h3 class="text-2xl md:text-4xl font-light tracking-widest text-white transition-colors duration-300 group-hover:text-gold">Digital</h3>
+                <div class="w-2 h-2 rounded-full bg-gold md:mt-6 shadow-[0_0_10px_rgba(197,160,89,0.8)]"></div>
+              </div>
+            </div>
+            <div
+              class="reveal reveal-delay-1 relative text-left flex-1 w-full border-t border-white/5 md:border-t-0 md:border-l pt-6 pb-6 md:pt-0 md:pb-0 md:pl-8 transition-colors duration-500 hover:border-gold/30 group"
+            >
+              <div class="w-full flex items-center justify-between md:inline-flex md:flex-col md:items-center md:w-auto">
+                <h3 class="text-2xl md:text-4xl font-light tracking-widest text-white transition-colors duration-300 group-hover:text-gold">Creative</h3>
+                <div class="w-2 h-2 rounded-full bg-gold md:mt-6 opacity-70 shadow-[0_0_10px_rgba(197,160,89,0.5)]"></div>
+              </div>
+            </div>
+            <div
+              class="reveal reveal-delay-2 relative text-left flex-1 w-full border-t border-white/5 md:border-t-0 md:border-l pt-6 pb-6 md:pt-0 md:pb-0 md:pl-8 transition-colors duration-500 hover:border-gold/30 group"
+            >
+              <div class="w-full flex items-center justify-between md:inline-flex md:flex-col md:items-center md:w-auto">
+                <h3 class="text-2xl md:text-4xl font-light tracking-widest text-white transition-colors duration-300 group-hover:text-gold">Offline</h3>
+                <div class="w-2 h-2 rounded-full bg-gold md:mt-6 opacity-40 shadow-[0_0_10px_rgba(197,160,89,0.3)]"></div>
+              </div>
+            </div>
+            <div
+              class="reveal reveal-delay-3 relative text-left flex-1 w-full border-t border-white/5 md:border-t-0 md:border-l md:border-r pt-6 pb-6 md:pt-0 md:pb-0 md:pl-8 md:pr-8 transition-colors duration-500 hover:border-gold/30 group"
+            >
+              <div class="w-full flex items-center justify-between md:inline-flex md:flex-col md:items-center md:w-auto">
+                <h3 class="text-2xl md:text-4xl font-light tracking-widest text-white transition-colors duration-300 group-hover:text-gold">Strategy</h3>
+                <div class="w-2 h-2 rounded-full bg-gold md:mt-6 opacity-20 shadow-[0_0_10px_rgba(197,160,89,0.1)]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIGNATURE SECTION - CONCEPTS -->
+      <section class="py-24 md:py-36 w-full relative border-t border-white/5">
+        <div class="cinematic-glow glow-gold w-[80vw] h-[80vw] md:w-[40vw] md:h-[40vw] top-0 right-0 opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full text-left relative z-10">
+          
+          <div class="reveal mb-16 md:mb-24">
+            <h2 class="text-base md:text-base text-blue uppercase tracking-widest-xl font-semibold relative pb-4 inline-block">
+              Selected Concepts
+              <span class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-gold via-white to-gold rounded-full"></span>
+            </h2>
+          </div>
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center"
+          >
+            <div class="order-2 lg:order-1 lg:col-span-5 text-left">
+              
+              <div class="reveal">
+                <h3
+                  class="text-5xl md:text-7xl font-light tracking-[0.15em] uppercase mb-4 text-white interactive hover:text-gold transition-colors duration-500"
+                >
+                  SeeSip
+                </h3>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 font-light italic">
+                  Visibility, held in hand.
+                </p>
+              </div>
+
+              <div class="reveal reveal-delay-1">
+                <p
+                  class="text-base md:text-lg text-gray-400 mb-10 font-light leading-relaxed"
+                >
+                  A proprietary advertising medium designed to place brands
+                  within everyday consumption.
+                </p>
+              </div>
+
+              <div
+                class="reveal reveal-delay-2 flex flex-col gap-5 text-xs tracking-widest-xl uppercase text-gray-500 mb-12"
+              >
+                <span class="flex items-center justify-start gap-4"><span class="w-1 h-1 rounded-full bg-white/20"></span>High-frequency exposure</span>
+                <span class="flex items-center justify-start gap-4"><span class="w-1 h-1 rounded-full bg-white/20"></span>Physical interaction</span>
+                <span class="flex items-center justify-start gap-4"><span class="w-1 h-1 rounded-full bg-white/20"></span>Contextual placement</span>
+              </div>
+
+              <div class="reveal reveal-delay-3">
+                 <a href="https://seesip.in" target="_blank" class="inline-flex items-center justify-center gap-4 text-[10px] tracking-widest-xl uppercase text-white border border-white/20 hover:border-gold hover:text-gold hover:bg-gold/5 py-4 px-8 rounded-full transition-all duration-500 interactive group w-full md:w-auto">
+                    Explore SeeSip
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                 </a>
+              </div>
+            </div>
+
+            <div
+              class="order-1 lg:order-2 lg:col-span-7 w-full h-[50vh] md:h-[70vh] relative hover-zoom interactive overflow-hidden bg-black reveal reveal-delay-1"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black z-10 opacity-80 pointer-events-none"
+              ></div>
+              <img
+                src="product_example.jpeg"
+                alt="SeeSip Contextual Placement"
+                class="w-full h-full object-cover object-center slow-zoom opacity-90 saturate-50 contrast-125"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div
+                class="hidden absolute inset-0 bg-[#080808] flex-col items-center justify-center text-center p-8 border border-white/5 z-0"
+              >
+                <div
+                  class="w-24 h-24 rounded-full border border-gold/30 mb-6 flex items-center justify-center"
+                >
+                  <span class="text-gold text-xs uppercase tracking-widest"
+                    >Bottle</span
+                  >
+                </div>
+                <span class="text-gray-600 text-xs uppercase tracking-widest"
+                  >Visual Asset Missing</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal mt-24 md:mt-32 pt-12 border-t border-white/5 text-left">
+            <p
+              class="text-xs text-gray-500 uppercase tracking-widest-xl font-medium"
+            >
+              Building a growing portfolio of proprietary media systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPROACH -->
+      <section class="py-24 md:py-48 w-full relative overflow-hidden bg-[#000]">
+        <div
+          class="cinematic-glow glow-gold w-[80vw] h-[80vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10"
+        ></div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full text-left relative z-10">
+          <div class="reveal mb-12 md:mb-16">
+            <h2 class="text-base md:text-base text-blue uppercase tracking-widest-xl font-semibold relative pb-4 inline-block">
+              Approach
+              <span class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-gold via-white to-gold rounded-full"></span>
+            </h2>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <p
+              class="text-2xl md:text-5xl font-light leading-relaxed text-gray-300"
+            >
+              We observe before we act. <br class="hidden md:block" />
+              We design before we deploy. <br class="hidden md:block" />
+              We place brands where attention already exists.
+              <br class="hidden md:block" />
+              <span
+                class="text-gold italic mt-6 block text-xl md:text-4xl font-serif"
+                >And where it returns.</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBTLE AUTHORITY -->
+      <section class="py-20 md:py-32 w-full border-y border-white/5 bg-[#030303]">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full text-left reveal">
+          <h2
+            class="text-lg md:text-2xl text-gray-350 font-light tracking-[0.2em] uppercase"
+          >
+            Built for brands that want to be remembered.
+          </h2>
+        </div>
+      </section>
+
+      <!-- CLOSING & CONTACT -->
+      <section id="contact" class="py-24 md:py-48 w-full">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 w-full text-left flex flex-col md:flex-row gap-16 md:gap-24">
+          
+          <div class="w-full md:w-1/2 flex flex-col items-start">
+            <div class="reveal mb-8 md:mb-12">
+              <h2 class="text-base md:text-base text-blue uppercase tracking-widest-xl font-semibold relative pb-4 inline-block">
+                Connect
+                <span class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-gold via-white to-gold rounded-full"></span>
+              </h2>
+            </div>
+            <div class="reveal">
+              <p class="text-lg md:text-2xl text-gray-300 font-light tracking-widest mb-10 leading-relaxed">
+                For collaborations and brand partnerships, connect.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full md:w-1/2">
+            <form
+              id="contactForm"
+              class="reveal reveal-delay-1 flex flex-col gap-12 text-left"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="c15f9853-9d7a-4a78-9001-e1252f3211a6"
+              />
+
+              <div class="relative group interactive flex items-center gap-4 -mb-4">
+                <div class="relative flex items-center justify-center">
+                    <input
+                      type="checkbox"
+                      id="requestCallback"
+                      name="requestCallback"
+                      class="peer opacity-0 w-5 h-5 absolute cursor-none interactive z-10"
+                    />
+                    <div class="w-5 h-5 border border-gray-700 bg-transparent peer-checked:border-gold peer-checked:bg-gold transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-3 h-3 text-black opacity-0 peer-checked:opacity-100 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                </div>
+                <label
+                  for="requestCallback"
+                  class="text-gray-400 text-xs md:text-sm uppercase tracking-widest cursor-none interactive transition-colors hover:text-white"
+                >
+                  Request a Callback
+                </label>
+              </div>
+
+              <div class="relative group interactive">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder=" "
+                  required
+                  class="w-full bg-transparent border-b border-gray-700 pb-4 text-white text-lg focus:outline-none focus:border-gold transition-colors peer cursor-none"
+                />
+                <label
+                  for="name"
+                  class="absolute left-0 top-0 text-gray-500 text-sm uppercase tracking-widest transition-all peer-focus:-top-5 peer-focus:text-[10px] peer-focus:text-gold peer-not-placeholder-shown:-top-5 peer-not-placeholder-shown:text-[10px] pointer-events-none"
+                >
+                  Name
+                </label>
+              </div>
+
+              <div class="relative group interactive">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder=" "
+                  required
+                  class="w-full bg-transparent border-b border-gray-700 pb-4 text-white text-lg focus:outline-none focus:border-gold transition-colors peer cursor-none"
+                />
+                <label
+                  for="email"
+                  class="absolute left-0 top-0 text-gray-500 text-sm uppercase tracking-widest transition-all peer-focus:-top-5 peer-focus:text-[10px] peer-focus:text-gold peer-not-placeholder-shown:-top-5 peer-not-placeholder-shown:text-[10px] pointer-events-none"
+                >
+                  Email
+                </label>
+              </div>
+
+              <div id="phoneContainer" class="relative group interactive opacity-0 transition-all duration-500" style="display: none;">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder=" "
+                  class="w-full bg-transparent border-b border-gray-700 pb-4 text-white text-lg focus:outline-none focus:border-gold transition-colors peer cursor-none"
+                />
+                <label
+                  for="phone"
+                  class="absolute left-0 top-0 text-gray-500 text-sm uppercase tracking-widest transition-all peer-focus:-top-5 peer-focus:text-[10px] peer-focus:text-gold peer-not-placeholder-shown:-top-5 peer-not-placeholder-shown:text-[10px] pointer-events-none"
+                >
+                  Phone Number
+                </label>
+              </div>
+
+              <div class="relative group interactive">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder=" "
+                  rows="1"
+                  required
+                  class="w-full bg-transparent border-b border-gray-700 pb-4 text-white text-lg focus:outline-none focus:border-gold transition-colors peer resize-none cursor-none"
+                ></textarea>
+                <label
+                  for="message"
+                  class="absolute left-0 top-0 text-gray-500 text-sm uppercase tracking-widest transition-all peer-focus:-top-5 peer-focus:text-[10px] peer-focus:text-gold peer-not-placeholder-shown:-top-5 peer-not-placeholder-shown:text-[10px] pointer-events-none"
+                >
+                  Message
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="mt-8 self-start text-[12px] uppercase tracking-widest-xl text-white border-b border-transparent hover:border-gold hover:text-gold pb-2 transition-all duration-300 interactive cursor-none form-submit"
+              >
+                Submit
+              </button>
+
+              <div id="formFeedback" class="hidden mt-6 text-[10px] md:text-xs uppercase tracking-widest-xl text-center py-4 border transition-opacity duration-500 opacity-0"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer
+        class="py-16 px-6 md:px-12 border-t border-white/5 bg-black text-[10px] tracking-widest-xl uppercase text-gray-600 flex justify-center"
+      >
+        <div class="w-full max-w-5xl flex flex-col gap-12">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-24"
+          >
+            <div class="flex items-center">
+              <img
+                src="logo.png"
+                alt="AdCulture Ventures"
+                class="h-10 md:h-14 object-contain transition-all duration-500 interactive"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'block';
+                "
+              />
+              <span class="hidden text-white font-light ml-4 tracking-widest"
+                >ADCULTURE VENTURES</span
+              >
+            </div>
+
+            <div
+              class="flex flex-col md:flex-row gap-12 md:gap-24 text-center md:text-left"
+            >
+              <div class="flex flex-col gap-4">
+                <span class="text-gray-400 font-semibold mb-2">Contact</span>
+                <a
+                  href="mailto:sales@adcultureventures.com"
+                  class="hover:text-gold transition-colors duration-300 interactive text-gray-500"
+                  >Email</a
+                >
+                <a
+                  href="tel:+917219702806"
+                  class="hover:text-gold transition-colors duration-300 interactive text-gray-500"
+                  >Call</a
+                >
+              </div>
+              <div class="flex flex-col gap-4">
+                <span class="text-gray-400 font-semibold mb-2">Social</span>
+                <a
+                  href="https://www.instagram.com/see.sip"
+                  class="hover:text-gold transition-colors duration-300 interactive text-gray-500"
+                  >Instagram</a
+                >
+                <a
+                  href="https://www.linkedin.com/company/adculture-ventures/"
+                  class="hover:text-gold transition-colors duration-300 interactive text-gray-500"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/10"
+          >
+            <div class="order-1 md:order-1 text-gray-500">
+              &copy; <span id="year"></span> AdCulture Ventures.
+            </div>
+            <div
+              class="order-1 md:order-1 tracking-widest text-center md:text-right"
+            >
+              Website passionately built by
+              <a
+                href="https://apexcause.com"
+                target="_blank"
+                rel="noopener"
+                style="text-decoration: underline"
+                class="opacity-80 interactive hover:text-gold transition-colors"
+                >ApexCause</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
 </html>

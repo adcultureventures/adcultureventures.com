@@ -1,0 +1,9 @@
+
+
+/* TEAM */
+    Development & Design: ApexCause
+    Website: https://apexcause.com
+
+/* SITE */
+    Last update: 2026/05
+    Standards: HTML5, CSS3, JavaScript
